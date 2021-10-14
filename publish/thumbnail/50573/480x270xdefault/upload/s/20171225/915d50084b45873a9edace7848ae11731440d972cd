@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<head>
+   
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      
+    <title>Đài Truyền Thanh - Truyền Hình Thành Phố Thái Nguyên | Họp Ban tổ chức Ng&#224;y hội đọc th&#224;nh phố Th&#225;i Nguy&#234;n năm 2017.</title>
+    <meta content="Đài Truyền Thanh - Truyền Hình Thành Phố Thái Nguyên | Họp Ban tổ chức Ng&#224;y hội đọc th&#224;nh phố Th&#225;i Nguy&#234;n năm 2017." name="keywords">
+    <meta content="Đài Truyền Thanh - Truyền Hình Thành Phố Thái Nguyên | Họp Ban tổ chức Ng&#224;y hội đọc th&#224;nh phố Th&#225;i Nguy&#234;n năm 2017." name="description">
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="/Content/Home/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/Home/css/idangerous.swiper.css" media="screen">
+    <link href="/Content/Home/css/jquery-ui-1.css" rel="stylesheet">
+    <script src="/Content/Home/js/jquery-1.10.2.js"></script>
+    <script src="/Content/Home/js/jquery-ui-1.js"></script>
+    <script src="/Content/Home/js/idangerous.swiper-2.0.min.js"></script>
+    <script type="text/javascript" src="/Content/Home/js/ui.js"></script>
+    <script>
+        $(function () {
+            $(".accodion").accordion({
+                collapsible: true,
+                heightStyle: "content"
+            });
+        });
+    </script>
+</head>
+<body>
+   
+   
+
+
+<div class="menuscroll">
+    <div id="header" class="topheader">
+        <h1 class="logo"><a href="http://m.daithainguyen.vn/" title="Đài Truyền Thanh - Truyền Hình Thành Phố Thái Nguyên">
+            <img src="/Content/Home/images/bannertop.jpg" /></a></h1>
+    </div>
+    <header id="siteheader" class="clearfix">
+        <div class="btn menu">
+            <span class="btn_menu">
+                <img src="/Content/Home/images/btnMenu.png" /></span>
+            <ul class="sub sub-menu">
+                
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/gioi-thieu/gioi-thieu-chung-10.html">Giới thiệu</a></li>
+                <li><a href="/truyen-hinh.html">Truyền hình</a></li>
+                <li><a href="/phat-thanh.html">Phát thanh</a></li>
+                <li><a href="/danh-cho-du-khach.html">Du lịch Thái Nguyên</a></li>
+                <li><a href="/thuong-hieu-tin-cay.html">Thương hiệu tin cậy</a></li>
+                <li><a href="/hoi-nhap-va-phat-trien.html">Hội nhập và phát triển</a></li>
+                <li><a href="/tin-tuc.html">Tin tức</a></li>
+                
+            </ul>
+        </div>
+        
+        <div class="btn search">
+            <span class=""><i class="sprite ic-search"></i></span>
+
+            <div class="sub sub-search">
+                <div>
+                    <input type="text" class="search-query" placeholder="Từ khóa" id="txtKeySearch" />
+                    
+                    <input type="button" class="search-button" id="btnSeach" onclick="javascript: StarSearch();" value="Tìm kiếm" name="btnSeach">
+                </div>
+            </div>
+        </div>
+        <div class="btn_dulich">
+            <a href="/danh-cho-du-khach.html">
+                <span class="">
+                    <img style="width: 30px; height: 30px;" src="/Content/Home/Images/icon-dulich.png" /></span>
+            </a>
+        </div>
+        <div class="btn_audio">
+            <a href="/phat-thanh.html">
+                <span class="">
+                    <img style="width: 24px; height: 24px;" src="/Content/Home/Images/audio_icon3.png" /></span>
+            </a>
+        </div>
+        <div class="btn_video">
+            <a href="/truyen-hinh.html">
+                <span class="">
+                    <img style="width: 32px; height: 33px;" src="/Content/Home/Images/TV_Play.png" /></span>
+            </a>
+        </div>
+
+        <script type="text/javascript">
+            $('#txtKeySearch').on('keypress', function (event) {
+                if (event.which == '13') {
+                    StarSearch();
+                }
+            });
+            function StarSearch() {
+                var key = $("#txtKeySearch").val();
+                if (key == "") {
+                    $("#txtKeySearch").focus();
+                    return;
+                }
+                else {
+                    window.location = "/ket-qua-tim-kiem.html?SearchKey=" + key;
+                }
+            }
+        </script>
+        <script>
+            // Create a clone of the menu, right next to original.
+            $('.menuscroll').addClass('original').clone().insertAfter('.menuscroll').addClass('cloned').css('position', 'fixed').css('top', '0').css('margin-top', '0').css('z-index', '500').removeClass('original').hide();
+
+            scrollIntervalID = setInterval(stickIt, 10);
+
+
+            function stickIt() {
+
+                var orgElementPos = $('.original').offset();
+                orgElementTop = orgElementPos.top;
+
+                if ($(window).scrollTop() >= (orgElementTop)) {
+                    // scrolled past the original position; now only show the cloned, sticky element.
+
+                    // Cloned element should always have same left position and width as original element.     
+                    orgElement = $('.original');
+                    coordsOrgElement = orgElement.offset();
+                    leftOrgElement = coordsOrgElement.left;
+                    widthOrgElement = orgElement.css('width');
+                    $('.cloned').css('left', leftOrgElement + 'px').css('top', 0).css('width', widthOrgElement).show();
+                    $('.original').css('visibility', 'hidden');
+                } else {
+                    // not scrolled past the menu; only show the original menu.
+                    $('.cloned').hide();
+                    $('.original').css('visibility', 'visible');
+                }
+            }
+        </script>
+    </header>
+</div>
+
+	 
+	 
+    <!--SITE CONTAINER-->
+    <div id="site-content">
+        
+
+<script type="text/javascript" src="/jw/jwplayer.js"></script>
+<script>
+    var a = '';
+    var b = 'hop-ban-to-chuc-ngay-hoi-doc-thanh-pho-thai-nguyen-nam-2017_10008.html';
+    var c = '/upload/Video/Nam2017/thang4/trien khai ke hoach ngay hoi doc sach.mp4';
+</script>
+<script type="text/javascript" src="/JsViews/a.js"></script>
+<section class="browers">
+    <section style="padding-bottom: 0;" class="block">
+        <header style="background-image: none; margin-bottom: 10px;" class="hs-red clearfix">
+            <div itemscope="">
+                <a class="titleChildrena" title="Truyền hình" href="/truyen-hinh.html">
+                    <span itemprop="title">Truyền hình »
+                    </span>
+                </a>
+                <a class="titleChildrena" title="VĂN H&#211;A" href="/danh-muc-video/van-hoa-30.html"><span itemprop="title">VĂN H&#211;A</span></a>
+            </div>
+        </header>
+    </section>
+</section>
+<section class="article-page">
+    <article class="main-article">
+        <header>Họp Ban tổ chức Ng&#224;y hội đọc th&#224;nh phố Th&#225;i Nguy&#234;n năm 2017.</header>
+        <div class="main-meta clearfix">
+            <time>06/04/2017 16:04 | Lượt xem : 668</time>
+        </div>
+        <div id="abody" class="text">
+            <div class="movie_player">
+                <div id='player'>
+
+                </div>
+            </div>
+           
+        </div>
+        <div class="share_box">
+            <div class="addthis_sharing_toolbox"></div>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c49ed1343ab0b9"></script>
+            <div class="clear"></div>
+        </div>
+    </article>
+    <script type='text/javascript'>
+        if ('' == '') {
+            playvideo();
+        }
+    </script>
+
+    <style type="text/css">
+        #verifier a
+        {
+            display: inline;
+            width: 10%;
+        }
+    </style>
+    <section class="article-relate">
+            <div class="block">
+                <h2>VIDEO CÙNG CHUYÊN MỤC</h2>
+                <ul>
+                        <li><a href="/truyen-hinh/trien-lam-suc-song-truong-sa_11001.html">Triển l&#227;m &quot;Sức sống Trường Sa&quot;.</a></li>
+                        <li><a href="/truyen-hinh/bao-tang-thai-nguyen-to-chuc-ky-niem-ngay-di-san-van-hoa-viet-nam-2311_10924.html">Bảo t&#224;ng Th&#225;i Nguy&#234;n tổ chức kỷ niệm Ng&#224;y Di sản văn h&#243;a Việt Nam 23/11.</a></li>
+                        <li><a href="/truyen-hinh/khanh-thanh-den-ran-xa-huong-thuong_10848.html">Kh&#225;nh th&#224;nh Đền Rắn, x&#227; Huống Thượng.</a></li>
+                        <li><a href="/truyen-hinh/chuong-trinh-nghe-thuat-chao-mung-55-nam-ngay-thanh-lap-thanh-pho-thai-nguyen_10790.html">Chương tr&#236;nh nghệ thuật  ch&#224;o mừng 55 năm ng&#224;y th&#224;nh lập th&#224;nh phố Th&#225;i Nguy&#234;n </a></li>
+                        <li><a href="/truyen-hinh/cau-lac-bo-khieu-vu-quoc-te-gio-ngan-ky-niem-10-nam-ngay-thanh-lap_10752.html">C&#226;u lạc bộ khi&#234;u vũ Quốc tế Gi&#243; Ng&#224;n kỷ niệm 10 năm ng&#224;y th&#224;nh lập.</a></li>
+                </ul>
+            </div>
+    </section>
+</section>
+
+    </div>
+    <!--END SITE CONTAINER-->
+    <!--SITE FOOTER-->
+
+<footer id="sitefooter" class="clearfix">
+    <div class="top">
+        
+        <a href="#top" class="desktop-version"><i class="sprite ic-gototop"></i><span>Lên đầu trang</span> </a>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="copyright">
+        <p>ĐÀI TRUYỀN THANH - TRUYỀN HÌNH TP THÁI NGUYÊN</p>
+		<p>CƠ QUAN CHỦ QUẢN: UBND TP THÁI NGUYÊN</p>
+        <p>Giấy phép số 331/GP-TTĐT Sở TT&TT cấp ngày 25/04/2016</p>
+        <p>
+            Địa chỉ: Đường Hùng Vương – Phường Trưng Vương - TP Thái Nguyên
+        </p>
+        <p>
+            Tổng Biên tập: Nguyễn Văn Thưởng; Điện thoại: 0280.3755.696
+        </p>
+        <p>
+            Website: daithainguyen.vn - Thiết kế bởi: TBTSoft Co., Ltd.
+        </p>
+
+    </div>
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29671141-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <!--END SITE FOOTER-->
+    <script>
+        function Count(a, h, tag, id) {
+            //update count
+            var jsonpara2 = "/Home/UpdateCountAdv";
+            $.ajax({
+                url: jsonpara2,
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: "{ 'id' : " + id + " }",
+                success: function (data) {
+                    if (data.Data == true) {
+                        //if (tag == "_blank") {
+                        //    window.open(h, "_blank");
+                        //    window.focus();
+                        //}
+                        //if (tag == "_parent") {
+                        //    window.location.href = h;
+                        //}
+                        window.location.href = h;
+                    }
+                }
+            });
+
+        }
+        </script>
+</body>
+</html>

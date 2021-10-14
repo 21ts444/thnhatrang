@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<head>
+   
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      
+    <title>Đài Truyền Thanh - Truyền Hình Thành Phố Thái Nguyên | Sinh hoạt chuy&#234;n đề ph&#242;ng chống x&#226;m hại trẻ em tại Li&#234;n đội Tiểu học Nha Trang</title>
+    <meta content="Đài Truyền Thanh - Truyền Hình Thành Phố Thái Nguyên | Sinh hoạt chuy&#234;n đề ph&#242;ng chống x&#226;m hại trẻ em tại Li&#234;n đội Tiểu học Nha Trang" name="keywords">
+    <meta content="Đài Truyền Thanh - Truyền Hình Thành Phố Thái Nguyên | Sinh hoạt chuy&#234;n đề ph&#242;ng chống x&#226;m hại trẻ em tại Li&#234;n đội Tiểu học Nha Trang" name="description">
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="/Content/Home/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/Home/css/idangerous.swiper.css" media="screen">
+    <link href="/Content/Home/css/jquery-ui-1.css" rel="stylesheet">
+    <script src="/Content/Home/js/jquery-1.10.2.js"></script>
+    <script src="/Content/Home/js/jquery-ui-1.js"></script>
+    <script src="/Content/Home/js/idangerous.swiper-2.0.min.js"></script>
+    <script type="text/javascript" src="/Content/Home/js/ui.js"></script>
+    <script>
+        $(function () {
+            $(".accodion").accordion({
+                collapsible: true,
+                heightStyle: "content"
+            });
+        });
+    </script>
+</head>
+<body>
+   
+   
+
+
+<div class="menuscroll">
+    <div id="header" class="topheader">
+        <h1 class="logo"><a href="http://m.daithainguyen.vn/" title="Đài Truyền Thanh - Truyền Hình Thành Phố Thái Nguyên">
+            <img src="/Content/Home/images/bannertop.jpg" /></a></h1>
+    </div>
+    <header id="siteheader" class="clearfix">
+        <div class="btn menu">
+            <span class="btn_menu">
+                <img src="/Content/Home/images/btnMenu.png" /></span>
+            <ul class="sub sub-menu">
+                
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/gioi-thieu/gioi-thieu-chung-10.html">Giới thiệu</a></li>
+                <li><a href="/truyen-hinh.html">Truyền hình</a></li>
+                <li><a href="/phat-thanh.html">Phát thanh</a></li>
+                <li><a href="/danh-cho-du-khach.html">Du lịch Thái Nguyên</a></li>
+                <li><a href="/thuong-hieu-tin-cay.html">Thương hiệu tin cậy</a></li>
+                <li><a href="/hoi-nhap-va-phat-trien.html">Hội nhập và phát triển</a></li>
+                <li><a href="/tin-tuc.html">Tin tức</a></li>
+                
+            </ul>
+        </div>
+        
+        <div class="btn search">
+            <span class=""><i class="sprite ic-search"></i></span>
+
+            <div class="sub sub-search">
+                <div>
+                    <input type="text" class="search-query" placeholder="Từ khóa" id="txtKeySearch" />
+                    
+                    <input type="button" class="search-button" id="btnSeach" onclick="javascript: StarSearch();" value="Tìm kiếm" name="btnSeach">
+                </div>
+            </div>
+        </div>
+        <div class="btn_dulich">
+            <a href="/danh-cho-du-khach.html">
+                <span class="">
+                    <img style="width: 30px; height: 30px;" src="/Content/Home/Images/icon-dulich.png" /></span>
+            </a>
+        </div>
+        <div class="btn_audio">
+            <a href="/phat-thanh.html">
+                <span class="">
+                    <img style="width: 24px; height: 24px;" src="/Content/Home/Images/audio_icon3.png" /></span>
+            </a>
+        </div>
+        <div class="btn_video">
+            <a href="/truyen-hinh.html">
+                <span class="">
+                    <img style="width: 32px; height: 33px;" src="/Content/Home/Images/TV_Play.png" /></span>
+            </a>
+        </div>
+
+        <script type="text/javascript">
+            $('#txtKeySearch').on('keypress', function (event) {
+                if (event.which == '13') {
+                    StarSearch();
+                }
+            });
+            function StarSearch() {
+                var key = $("#txtKeySearch").val();
+                if (key == "") {
+                    $("#txtKeySearch").focus();
+                    return;
+                }
+                else {
+                    window.location = "/ket-qua-tim-kiem.html?SearchKey=" + key;
+                }
+            }
+        </script>
+        <script>
+            // Create a clone of the menu, right next to original.
+            $('.menuscroll').addClass('original').clone().insertAfter('.menuscroll').addClass('cloned').css('position', 'fixed').css('top', '0').css('margin-top', '0').css('z-index', '500').removeClass('original').hide();
+
+            scrollIntervalID = setInterval(stickIt, 10);
+
+
+            function stickIt() {
+
+                var orgElementPos = $('.original').offset();
+                orgElementTop = orgElementPos.top;
+
+                if ($(window).scrollTop() >= (orgElementTop)) {
+                    // scrolled past the original position; now only show the cloned, sticky element.
+
+                    // Cloned element should always have same left position and width as original element.     
+                    orgElement = $('.original');
+                    coordsOrgElement = orgElement.offset();
+                    leftOrgElement = coordsOrgElement.left;
+                    widthOrgElement = orgElement.css('width');
+                    $('.cloned').css('left', leftOrgElement + 'px').css('top', 0).css('width', widthOrgElement).show();
+                    $('.original').css('visibility', 'hidden');
+                } else {
+                    // not scrolled past the menu; only show the original menu.
+                    $('.cloned').hide();
+                    $('.original').css('visibility', 'visible');
+                }
+            }
+        </script>
+    </header>
+</div>
+
+	 
+	 
+    <!--SITE CONTAINER-->
+    <div id="site-content">
+        
+
+<script type="text/javascript" src="/jw/jwplayer.js"></script>
+<script>
+    var a = '';
+    var b = 'sinh-hoat-chuyen-de-phong-chong-xam-hai-tre-em-tai-lien-doi-tieu-hoc-nha-trang_10080.html';
+    var c = 'upload/video/nam2017/thang4/nha trang.mp4';
+</script>
+<script type="text/javascript" src="/JsViews/a.js"></script>
+<section class="browers">
+    <section style="padding-bottom: 0;" class="block">
+        <header style="background-image: none; margin-bottom: 10px;" class="hs-red clearfix">
+            <div itemscope="">
+                <a class="titleChildrena" title="Truyền hình" href="/truyen-hinh.html">
+                    <span itemprop="title">Truyền hình »
+                    </span>
+                </a>
+                <a class="titleChildrena" title="X&#195; HỘI" href="/danh-muc-video/xa-hoi-29.html"><span itemprop="title">X&#195; HỘI</span></a>
+            </div>
+        </header>
+    </section>
+</section>
+<section class="article-page">
+    <article class="main-article">
+        <header>Sinh hoạt chuy&#234;n đề ph&#242;ng chống x&#226;m hại trẻ em tại Li&#234;n đội Tiểu học Nha Trang</header>
+        <div class="main-meta clearfix">
+            <time>25/04/2017 15:39 | Lượt xem : 1251</time>
+        </div>
+        <div id="abody" class="text">
+            <div class="movie_player">
+                <div id='player'>
+
+                </div>
+            </div>
+           
+        </div>
+        <div class="share_box">
+            <div class="addthis_sharing_toolbox"></div>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c49ed1343ab0b9"></script>
+            <div class="clear"></div>
+        </div>
+    </article>
+    <script type='text/javascript'>
+        if ('' == '') {
+            playvideo();
+        }
+    </script>
+
+    <style type="text/css">
+        #verifier a
+        {
+            display: inline;
+            width: 10%;
+        }
+    </style>
+    <section class="article-relate">
+            <div class="block">
+                <h2>VIDEO CÙNG CHUYÊN MỤC</h2>
+                <ul>
+                        <li><a href="/truyen-hinh/trien-lam-anh-voi-chu-de-truong-sa-vang-mai-ban-hung-ca_11028.html">Triển l&#227;m ảnh với chủ đề &quot;Trường Sa - Vang m&#227;i bản h&#249;ng ca&quot;</a></li>
+                        <li><a href="/truyen-hinh/nha-phan-phoi-chan-ga-goi-dem-uan-nga-tri-an-khach-hang_11025.html">Nh&#224; ph&#226;n phối chăn ga, gối, đệm U&#226;n Nga tri &#226;n kh&#225;ch h&#224;ng.</a></li>
+                        <li><a href="/truyen-hinh/thanh-doan-thai-nguyen-dang-huong-tuong-niem-cac-anh-hung-liet-sy-dai-doi-915-gia-sang_11024.html">Th&#224;nh đo&#224;n Th&#225;i Nguy&#234;n d&#226;ng hương tưởng niệm c&#225;c anh h&#249;ng liệt sỹ Đại đội 915 Gia S&#224;ng.</a></li>
+                        <li><a href="/truyen-hinh/chuong-trinh-tinh-nguyen-dong-am-so-1_11022.html">Chương tr&#236;nh t&#236;nh nguyện &quot;Đ&#244;ng ấm số 1&quot;.</a></li>
+                        <li><a href="/truyen-hinh/trao-tang-cong-trinh-thanh-nien-tuyen-duong-thap-sang-lang-que_11020.html">Trao tặng c&#244;ng tr&#236;nh thanh ni&#234;n &quot;Tuyến đường thắp s&#225;ng l&#224;ng qu&#234;&quot;</a></li>
+                </ul>
+            </div>
+    </section>
+</section>
+
+    </div>
+    <!--END SITE CONTAINER-->
+    <!--SITE FOOTER-->
+
+<footer id="sitefooter" class="clearfix">
+    <div class="top">
+        
+        <a href="#top" class="desktop-version"><i class="sprite ic-gototop"></i><span>Lên đầu trang</span> </a>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="copyright">
+        <p>ĐÀI TRUYỀN THANH - TRUYỀN HÌNH TP THÁI NGUYÊN</p>
+		<p>CƠ QUAN CHỦ QUẢN: UBND TP THÁI NGUYÊN</p>
+        <p>Giấy phép số 331/GP-TTĐT Sở TT&TT cấp ngày 25/04/2016</p>
+        <p>
+            Địa chỉ: Đường Hùng Vương – Phường Trưng Vương - TP Thái Nguyên
+        </p>
+        <p>
+            Tổng Biên tập: Nguyễn Văn Thưởng; Điện thoại: 0280.3755.696
+        </p>
+        <p>
+            Website: daithainguyen.vn - Thiết kế bởi: TBTSoft Co., Ltd.
+        </p>
+
+    </div>
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29671141-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <!--END SITE FOOTER-->
+    <script>
+        function Count(a, h, tag, id) {
+            //update count
+            var jsonpara2 = "/Home/UpdateCountAdv";
+            $.ajax({
+                url: jsonpara2,
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: "{ 'id' : " + id + " }",
+                success: function (data) {
+                    if (data.Data == true) {
+                        //if (tag == "_blank") {
+                        //    window.open(h, "_blank");
+                        //    window.focus();
+                        //}
+                        //if (tag == "_parent") {
+                        //    window.location.href = h;
+                        //}
+                        window.location.href = h;
+                    }
+                }
+            });
+
+        }
+        </script>
+</body>
+</html>
